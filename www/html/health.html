@@ -1,0 +1,34 @@
+<div class="tiles-container">
+    <div class="columns">
+        <div class="column is-4 is-offset-1 data-tile">
+            <h1 class="title">
+                Body temperature:
+            </h1>
+            <h1 class="fucking-huge-text">
+                {{ bodyTemperature }}&deg;
+            </h1>
+        </div>
+        <div class="column is-6 data-tile">
+            <canvas id="heartRateData" class="chart chart-line" chart-data="heartRateData"
+                    chart-labels="heartRateLabels" chart-options="options" height="100">
+            </canvas>
+            <h1 class="title">Heart rate: {{ heartRate }} bpm</h1>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column is-6 is-offset-1 data-tile">
+            <canvas id="bloodPressureData" class="chart chart-line" chart-data="bloodPressureData"
+                    chart-labels="bloodPressureLabels" chart-options="options" height="100">
+            </canvas>
+            <h1 class="title">Blood pressure: {{ bloodPressure }} mmHg</h1>
+        </div>
+        <div class="column is-4 data-tile">
+            <h1 class="title">
+                Skin conductivity:
+            </h1>
+            <h1 class="fucking-huge-text">
+                {{ skinConductivity }} &mu;S
+            </h1>
+        </div>
+    </div>
+</div>

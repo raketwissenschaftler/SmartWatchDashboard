@@ -1,0 +1,59 @@
+<div class="tiles-container">
+    <div class="columns">
+        <div class="column">
+            <h1 class="fucking-huge-text">
+                Hello, Rick!
+            </h1>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column is-4 is-offset-1 data-tile">
+            <canvas id="line" class="chart chart-line" chart-data="data"
+                    chart-labels="labels" chart-options="options">
+            </canvas>
+            <h1 class="title">Heart rate: {{ heartRate }} bpm</h1>
+        </div>
+        <div class="column is-6">
+            <div class="data-tile no-margin">
+                <h1 class="fucking-huge-text">{{ time.format('kk:mm:ss') }}</h1>
+            </div>
+            <div class="data-tile stacked-divs">
+                <h1 class="fucking-huge-text">{{ time.format('MMMM Do YYYY')}}</h1>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column is-3 is-offset-1 no-padding">
+            <div class="columns data-tile no-margin" style="height: 48%">
+                <div class="column is-one-quarter">
+                    <img src="www/img/logo.png" class="image">
+                </div>
+                <div class="column">
+                    <h1 class="title">
+                        {{ coordinates.latitude }}
+                    </h1>
+                    <h1 class="title">
+                        {{ coordinates.longitude }}
+                    </h1>
+                </div>
+            </div>
+            <div class="columns data-tile stacked-divs" style="height: 48%">
+                <div class="column is-one-quarter">
+                    <img src="www/img/heart.png" class="image">
+                </div>
+                <div class="column">
+                    <h1 class="title">
+                        {{ bloodPressure}} mmHg
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="column is-4 data-tile" id="fitness-goal-div">
+            <canvas id="bar" class="chart chart-bar"
+                    chart-data="fitnessGoalData" chart-labels="fitnessGoalLabels"
+            chart-options="options">
+            </canvas>
+            <h1 class="title">Fitness goal met: {{ fitnessGoalData[fitnessGoalData.length - 1]}}%</h1>
+        </div>
+    </div>
+</div>

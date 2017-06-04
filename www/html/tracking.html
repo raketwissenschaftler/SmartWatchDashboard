@@ -1,0 +1,40 @@
+<div class="tiles-container">
+    <div class="columns">
+        <div class="column is-3 is-offset-1 data-tile">
+            <h1 class="title">
+                Last workout
+            </h1>
+            <p>Distance: 10km</p>
+            <p>Calories burned: 543</p>
+            <p>Time: 1h 12m 08s</p>
+            <br>
+            <h1 class="title">
+                Today
+            </h1>
+            <p>Idle: 3 h</p>
+            <p>Walked: {{ kilometersWalked }} km</p>
+        </div>
+        <div class="column is-7 data-tile">
+            <div class="columns">
+                <div class="column is-three-quarters">
+                    <img src="www/img/map.png">
+                </div>
+                <div class="column is-one-quarter">
+                    <h1 class="title">Location:</h1>
+                    <h3 class="title is-3">51°26'53.9"N</h3>
+                    <h3 class="title is-3">5°29'25.3"E</h3>
+                    <h1 class="title">Speed:</h1>
+                    <h3 class="title is-3">3.4 km/h</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column is-10 is-offset-1 data-tile">
+            <canvas height="80" class="chart chart-bar"
+                    chart-data="walkedData" chart-labels="walkedLabels"
+                    chart-options="options"></canvas>
+            <h1 class="title">Walked: {{ kilometersWalked }} km</h1>
+        </div>
+    </div>
+</div>

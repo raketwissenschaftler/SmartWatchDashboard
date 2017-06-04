@@ -1,0 +1,77 @@
+<div class="tiles-container">
+    <div class="columns">
+        <div class="column is-3 is-offset-1 data-tile">
+            <h1 class="title">Warning tresholds</h1>
+            <p>Heart rate</p>
+            <div class="columns">
+                <div class="column">
+                    <p>Below</p>
+                </div>
+                <div class="column">
+                    <p>Above</p>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <input type="number" value="50">
+                </div>
+                <div class="column">
+                    <input type="number" value="170">
+                </div>
+            </div>
+            <p>Blood pressure</p>
+            <div class="columns">
+                <div class="column">
+                    <p>Below</p>
+                </div>
+                <div class="column">
+                    <p>Above</p>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <input type="number" value="50">
+                </div>
+                <div class="column">
+                    <input type="number" value="170">
+                </div>
+            </div>
+            <p>Body temperature</p>
+            <div class="columns">
+                <div class="column">
+                    <p>Below</p>
+                </div>
+                <div class="column">
+                    <p>Above</p>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <input type="number" value="50">
+                </div>
+                <div class="column">
+                    <input type="number" value="170">
+                </div>
+            </div>
+
+        </div>
+        <div class="column is-7 data-tile">
+            <h1 class="title">Default overview period</h1>
+            <div class="columns">
+                <div class="column" ng-repeat="column in columns">
+                    <h1 class="title">{{ column }}</h1>
+
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column" ng-repeat="column in columns">
+                    <input type="radio" name="interval" value="Hour">Hour<br>
+                    <input type="radio" name="interval" value="Day">Day<br>
+                    <input type="radio" name="interval" value="Week">Week<br>
+                    <input type="radio" name="interval" value="Month">Month<br>
+                    <input type="radio" name="interval" value="Year">Year
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

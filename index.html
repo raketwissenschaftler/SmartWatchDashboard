@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Global</title>
+    <!-- The CSS framework -->
+    <link href="node_modules/bulma/css/bulma.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="www/css/style.css" rel="stylesheet">
+    <!-- Import the angular javascript needed -->
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <!-- Import the chart library -->
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+    <!-- Import the time library -->
+    <script src="node_modules/moment/min/moment-with-locales.min.js"></script>
+    <!-- Import the custom javascript -->
+    <script src="www/js/index.js"></script>
+    <script src="www/js/controllers.js"></script>
+</head>
+<body ng-app="global">
+<div class="columns">
+    <div class="column is-2">
+        <div>
+            <img src="www/img/logo.png" class="logo-image">
+        </div>
+        <h1 class="title is-1" align="center">Global</h1>
+        <div class="options">
+            <div class="option" ui-sref="home" ui-sref-active="active">
+                Home
+            </div>
+            <div class="option" ui-sref="health" ui-sref-active="active">
+                Health
+            </div>
+            <div class="option" ui-sref="tracking" ui-sref-active="active">
+                Tracking
+            </div>
+            <div class="option" ui-sref="settings" ui-sref-active="active">
+                Settings
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <ui-view></ui-view>
+    </div>
+</div>
+</body>
+</html>
